@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Task Management Dashboard
 
-## Getting Started
+## Setup
 
-First, run the development server:
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm run dev` to start the development server.
+4. Open `http://localhost:3000` in your browser.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- View tasks in a Kanban board.
+- Add new tasks.
+- Drag and drop tasks between columns.
+- Persist tasks using a mock API.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Self-Evaluation Document
+Half-Page Summary: The project successfully implements a Kanban-style task management dashboard with drag-and-drop functionality and API integration. The UI is clean and responsive, but the drag-and-drop experience could be smoother.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Self-Criticism: The code could be more modular, and error handling for API calls is minimal.
 
-## Learn More
+Improvements: Add animations for drag-and-drop, improve error handling, and implement task editing.
 
-To learn more about Next.js, take a look at the following resources:
+Technology Rating: 8/10 for Next.js, 7/10 for @dnd-kit, and 9/10 for Tailwind CSS.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This implementation includes:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Kanban board with 3 columns
 
-## Deploy on Vercel
+Drag and drop functionality between columns
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Add/Delete tasks with confirmation modal
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Responsive design using Tailwind CSS
+
+Real API integration
+
+Client-side only implementation
