@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { handleApiRequest } from "../lib/api";
+import toast from "react-hot-toast";
 
 export default function AddTaskModal({ onClose, onTaskAdded }) {
   const [title, setTitle] = useState("");
@@ -10,7 +11,7 @@ export default function AddTaskModal({ onClose, onTaskAdded }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!title) return;
+    if (!title) return toast.error("Title is required");
 
     handleApiRequest(
       () =>
@@ -40,7 +41,6 @@ export default function AddTaskModal({ onClose, onTaskAdded }) {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="w-full p-2 border rounded bg-[#e5e7eb] text-black"
-              required
             />
           </div>
           <div className="mb-4">
