@@ -74,7 +74,6 @@ export default function Home() {
     if (activeStatus !== overStatus) {
       const updatedTasks = tasks.map((task) => {
         if (task.id === active.id) {
-          // Preserve all task properties while updating status
           return { ...task, status: overStatus };
         }
         return task;
@@ -82,7 +81,6 @@ export default function Home() {
       setTasks(updatedTasks);
 
       try {
-        // Send the complete updated task to backend
         const updatedTask = updatedTasks.find((task) => task.id === active.id);
         await fetch(`https://dummydata-9wt5.onrender.com/tasks/${active.id}`, {
           method: "PUT",

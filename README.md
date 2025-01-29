@@ -1,6 +1,6 @@
 # Task Management Dashboard
 
-## Setup
+## Setup local
 
 1. Clone the repository.
 2. Run `npm install` to install dependencies.
@@ -13,26 +13,20 @@
 - Add new tasks.
 - Drag and drop tasks between columns.
 - Persist tasks using a mock API.
+- Remove Task.
 
-Self-Evaluation Document
-Half-Page Summary: The project successfully implements a Kanban-style task management dashboard with drag-and-drop functionality and API integration. The UI is clean and responsive, but the drag-and-drop experience could be smoother.
+## Architecture and approach
 
-Self-Criticism: The code could be more modular, and error handling for API calls is minimal.
+Client-Side Rendering: All component runs on client-side
 
-Improvements: Add animations for drag-and-drop, improve error handling, and implement task editing.
+Component Structure:
+page.js: Main layout
+TaskColumn.js: Column container
+TaskCard.js: Individual task card with drag-and-drop
+AddTaskModal.js: Form for creating new tasks
 
-Technology Rating: 8/10 for Next.js, 7/10 for @dnd-kit, and 9/10 for Tailwind CSS.
-
-This implementation includes:
-
-Kanban board with 3 columns
-
-Drag and drop functionality between columns
-
-Add/Delete tasks with confirmation modal
-
-Responsive design using Tailwind CSS
-
-Real API integration
-
-Client-side only implementation
+API Integration:
+GET/PUT/DELETE to external API endpoint(rander fr web server )
+Immediate UI updates with optimistic updates
+Drag-and-Drop:
+@dnd-kit for smooth DnD operations(library)
